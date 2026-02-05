@@ -1,27 +1,54 @@
-# One Dark Theme (for Xcode)
+# Xcode Theme Installer
 
-This is a port of [xcode-one-dark](https://github.com/bojan/xcode-one-dark) with support for multiple font variants.
+A collection of color themes for Xcode with multiple font options. Choose from **6 color schemes** and **6 fonts** for **36 possible combinations**.
 
-## Screenshot
+Originally based on [xcode-one-dark](https://github.com/bojan/xcode-one-dark).
 
-![screenshot](.screenshots/screenshot.png)
+## Screenshots
 
-## Font Variants
+### Dark Themes
 
-| # | Variant | Font | Style |
-|---|---------|------|-------|
-| 1 | One Dark | [Fira Code](https://github.com/tonsky/FiraCode) | Monospaced with ligatures |
-| 2 | One Dark - Monaspace Neon | [Monaspace Neon Frozen](https://monaspace.githubnext.com/) | Neo-grotesque sans-serif |
-| 3 | One Dark - Monaspace Argon | [Monaspace Argon Frozen](https://monaspace.githubnext.com/) | Humanist sans-serif |
-| 4 | One Dark - Monaspace Xenon | [Monaspace Xenon Frozen](https://monaspace.githubnext.com/) | Slab serif |
-| 5 | One Dark - Monaspace Radon | [Monaspace Radon Frozen](https://monaspace.githubnext.com/) | Handwriting |
-| 6 | One Dark - Monaspace Krypton | [Monaspace Krypton Frozen](https://monaspace.githubnext.com/) | Mechanical sans-serif |
+| One Dark + Fira Code | Dracula + Fira Code |
+|:---:|:---:|
+| ![One Dark](.screenshots/one-dark.png) | ![Dracula](.screenshots/dracula.png) |
+
+| Solarized Dark + Fira Code | Halloween + Monaspace Neon |
+|:---:|:---:|
+| ![Solarized Dark](.screenshots/solarized-dark.png) | ![Halloween](.screenshots/halloween.png) |
+
+### Light Themes
+
+| GitHub Light + Fira Code | Solarized Light + Monaspace Radon |
+|:---:|:---:|
+| ![GitHub Light](.screenshots/github-light.png) | ![Solarized Light](.screenshots/solarized-light.png) |
+
+## Color Schemes
+
+| # | Scheme | Type | Based on |
+|---|--------|------|----------|
+| 1 | One Dark | Dark | [Atom One Dark](https://github.com/bojan/xcode-one-dark) |
+| 2 | Dracula | Dark | [Dracula Theme](https://draculatheme.com/) |
+| 3 | Solarized Dark | Dark | [Solarized](https://ethanschoonover.com/solarized/) by Ethan Schoonover |
+| 4 | Solarized Light | Light | [Solarized](https://ethanschoonover.com/solarized/) by Ethan Schoonover |
+| 5 | GitHub Light | Light | [GitHub Light Default](https://github.com/) |
+| 6 | Halloween | Dark | Custom (orange, purple, green) |
+
+## Fonts
+
+| # | Font | Style |
+|---|------|-------|
+| 1 | [Fira Code](https://github.com/tonsky/FiraCode) | Monospaced with ligatures |
+| 2 | [Monaspace Neon Frozen](https://monaspace.githubnext.com/) | Neo-grotesque sans-serif |
+| 3 | [Monaspace Argon Frozen](https://monaspace.githubnext.com/) | Humanist sans-serif |
+| 4 | [Monaspace Xenon Frozen](https://monaspace.githubnext.com/) | Slab serif |
+| 5 | [Monaspace Radon Frozen](https://monaspace.githubnext.com/) | Handwriting |
+| 6 | [Monaspace Krypton Frozen](https://monaspace.githubnext.com/) | Mechanical sans-serif |
 
 ## Installation
 
 ### Swift Package Manager (Recommended)
 
-Clone the repo and run `swift run`. An interactive menu will let you choose which variant(s) to install:
+Clone the repo and run `swift run`. A two-step interactive menu lets you pick your color scheme(s) and font(s):
 
 ```bash
 git clone https://github.com/SwiftyJourney/OneDarkTheme.git
@@ -30,9 +57,12 @@ swift run
 ```
 
 The installer will:
-- Show an interactive menu to pick one or more font variants
-- Download and install the required fonts automatically
-- Copy the selected theme(s) to Xcode's themes directory
+1. Ask you to choose one or more color schemes (or all 6)
+2. Ask you to choose one or more fonts (or all 6)
+3. Download and install the required fonts automatically
+4. Generate and install the selected theme combinations to Xcode's themes directory
+
+Select "All color schemes" + "All fonts" to install all 36 combinations at once.
 
 (Optional) Remove the cloned project after installation:
 
@@ -43,22 +73,30 @@ rm -rf OneDarkTheme
 
 ### Manual
 
-#### Fira Code variant
+Each color scheme has a base `.xccolortheme` file in the repository root (using Fira Code as the default font):
 
 1. Download [Fira Code](https://github.com/tonsky/FiraCode) and add the fonts from the `ttf` folder to your Font Book
-2. Copy `One Dark.xccolortheme` into `~/Library/Developer/Xcode/UserData/FontAndColorThemes/`
+2. Copy the desired `.xccolortheme` file into `~/Library/Developer/Xcode/UserData/FontAndColorThemes/`
 
-#### Monaspace variants
-
-1. Download [Monaspace Frozen](https://github.com/githubnext/monaspace/releases) and install the TTF fonts for your chosen family (e.g. `Frozen Fonts/Monaspace Neon/`) into Font Book
-2. Copy the corresponding `.xccolortheme` file (e.g. `One Dark - Monaspace Neon.xccolortheme`) into `~/Library/Developer/Xcode/UserData/FontAndColorThemes/`
+Available base theme files:
+- `One Dark.xccolortheme`
+- `Dracula.xccolortheme`
+- `Solarized Dark.xccolortheme`
+- `Solarized Light.xccolortheme`
+- `GitHub Light.xccolortheme`
+- `Halloween.xccolortheme`
 
 > Create the `UserData` and/or `FontAndColorThemes` directories if they don't exist.
 
-After installing, open Xcode (restart if it was already open), go to **Preferences > Themes**, and select your preferred One Dark variant.
+For Monaspace font variants, use `swift run` instead — the installer generates all font combinations dynamically.
+
+After installing, open Xcode (restart if it was already open), go to **Preferences > Themes**, and select your preferred theme.
 
 ## Attributions
 
-- [Bojan Dimovski](https://github.com/bojan), for making a nice theme accessible for the iOS community.
-- [John Sundell](https://github.com/JohnSundell), because thanks to his libraries and its own theme, made this great installation process easier.
+- [Bojan Dimovski](https://github.com/bojan), for the original [xcode-one-dark](https://github.com/bojan/xcode-one-dark) theme.
+- [John Sundell](https://github.com/JohnSundell), for the [Files](https://github.com/JohnSundell/Files) and [ShellOut](https://github.com/JohnSundell/ShellOut) libraries.
 - [GitHub Next](https://githubnext.com/), for the [Monaspace](https://monaspace.githubnext.com/) font superfamily.
+- [Dracula Theme](https://draculatheme.com/), for the Dracula color specification.
+- [Ethan Schoonover](https://ethanschoonover.com/solarized/), for the Solarized color palette.
+- [GitHub](https://github.com/), for the GitHub Light color scheme reference.
