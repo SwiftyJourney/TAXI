@@ -76,7 +76,12 @@ rm -rf OneDarkTheme
 Each color scheme has a base `.xccolortheme` file in the repository root (using Fira Code as the default font):
 
 1. Download [Fira Code](https://github.com/tonsky/FiraCode) and add the fonts from the `ttf` folder to your Font Book
-2. Copy the desired `.xccolortheme` file into `~/Library/Developer/Xcode/UserData/FontAndColorThemes/`
+2. Create the themes directory and copy your desired theme file:
+
+```bash
+mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+cp "One Dark.xccolortheme" ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+```
 
 Available base theme files:
 - `One Dark.xccolortheme`
@@ -85,8 +90,6 @@ Available base theme files:
 - `Solarized Light.xccolortheme`
 - `GitHub Light.xccolortheme`
 - `Halloween.xccolortheme`
-
-> Create the `UserData` and/or `FontAndColorThemes` directories if they don't exist.
 
 For Monaspace font variants, use `swift run` instead — the installer generates all font combinations dynamically.
 
