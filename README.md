@@ -100,6 +100,7 @@ After installing, open Xcode (restart if it was already open), go to **Preferenc
 - [Bojan Dimovski](https://github.com/bojan), for the original [xcode-one-dark](https://github.com/bojan/xcode-one-dark) theme.
 - [John Sundell](https://github.com/JohnSundell), for the [Files](https://github.com/JohnSundell/Files) and [ShellOut](https://github.com/JohnSundell/ShellOut) libraries.
 - [GitHub Next](https://githubnext.com/), for the [Monaspace](https://monaspace.githubnext.com/) font superfamily.
+- [José Davalos](https://github.com/jdavros), for introducing me to the Monaspace fonts.
 - [Dracula Theme](https://draculatheme.com/), for the Dracula color specification.
 - [Ethan Schoonover](https://ethanschoonover.com/solarized/), for the Solarized color palette.
 - [GitHub](https://github.com/), for the GitHub Light color scheme reference.
