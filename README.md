@@ -9,23 +9,23 @@ Originally based on [xcode-one-dark](https://github.com/bojan/xcode-one-dark).
 ### Dark Themes
 
 | One Dark + Fira Code | Dracula + Fira Code |
-|:---:|:---:|
+| :---: | :---: |
 | ![One Dark](.screenshots/one-dark.png) | ![Dracula](.screenshots/dracula.png) |
 
 | Solarized Dark + Fira Code | Halloween + Monaspace Neon |
-|:---:|:---:|
+| :---: | :---: |
 | ![Solarized Dark](.screenshots/solarized-dark.png) | ![Halloween](.screenshots/halloween.png) |
 
 ### Light Themes
 
 | GitHub Light + Fira Code | Solarized Light + Monaspace Radon |
-|:---:|:---:|
+| :---: | :---: |
 | ![GitHub Light](.screenshots/github-light.png) | ![Solarized Light](.screenshots/solarized-light.png) |
 
 ## Color Schemes
 
 | # | Scheme | Type | Based on |
-|---|--------|------|----------|
+| --- | -------- | ------ | ---------- |
 | 1 | One Dark | Dark | [Atom One Dark](https://github.com/bojan/xcode-one-dark) |
 | 2 | Dracula | Dark | [Dracula Theme](https://draculatheme.com/) |
 | 3 | Solarized Dark | Dark | [Solarized](https://ethanschoonover.com/solarized/) by Ethan Schoonover |
