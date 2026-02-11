@@ -1,4 +1,4 @@
-# Xcode Theme Installer
+# TAXI (Themes And Xcode Installer)
 
 A collection of color themes for Xcode with multiple font options. Choose from **6 color schemes** and **6 fonts** for **36 possible combinations**.
 
